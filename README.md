@@ -23,13 +23,17 @@ The datasets for the first and third tasks were provided by the professor.
 
 ### Installing
 
-I used anaconda to for dependency installation, so run this command in anaconda prompt:
-
-	conda create --name <env_name> --file requirements.txt
-
-Activation of the environment may be needed, in order to do so, run:
+First create a <code>virtualenv</code>
 	
-	conda activate <env_name>
+	virtualenv <env_name>
+
+Head to <env_name>/Scripts and execute:
+	
+	activate
+
+I used a normal Python 3.9 virtual environment. For dependency installation, run this command:
+
+	pip install -r requirements.txt
 
 Furthermore *API Keys* for AWS and Google API keys should be provided in the ***.env*** file.
 
