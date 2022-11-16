@@ -14,7 +14,13 @@ For the first task, a transformer pipeline was used to extract the sentiment for
 
 The second task uses the *distilbert_base_uncased* transformer model for training. 
 Additionally, the **English** subset of the *wikiAnn* dataset was used for training, testing and validation.
-The <code>seqeval</code> module provided the functionality to compute metrics of the model.
+The <code>seqeval</code> module provided the functionality to compute metrics of the model:
+
+Here are the graphs for the metrics during training over the full dataset for 10 epochs:
+
+![batch loss](https://github.com/A01378649/NLP_Challenge/blob/main/loss.png?raw=true)
+
+![epoch metrics](https://github.com/A01378649/NLP_Challenge/blob/main/split.png.jpg?raw=true)
 
 I picked **Google** and **AWS** translation APIs to complete the last one.
 It is worth noting that the 1-gram BLEU score is computed for score comparison between them.
