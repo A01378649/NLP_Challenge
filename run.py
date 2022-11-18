@@ -22,6 +22,23 @@ import keras
 from google.cloud import translate
 
 
+
+"""
+For tests, best practices are to have a structure like this: 
+https://stackoverflow.com/questions/1896918/running-unittest-with-typical-test-directory-structure
+
+so go ahead and separate the tests from the other logic, since when deploying, you don't want the testing logic mixed in with the main logic! 
+
+
+Part of this homework is the ability to write ML code in industry, which can’t be just coming from python notebooks! 
+It’s best practice to have your code in a descriptive method or small class, if possible, rather than running at the top-level. 
+This makes it easier for other modules to import the functionality later if needed! 
+
+Try to split your code into files, methods, and classes with descriptive names! Some reading for this: 
+
+Classes: https://www.dataquest.io/blog/using-classes-in-python/ and https://www.geeksforgeeks.org/python-classes-and-objects/
+
+"""
 # In[2]:
 
 
@@ -43,9 +60,7 @@ REVIEWS_PATH = "tiny_movie_reviews_dataset.txt"
 
 def get_movie_reviews(path):
     with open(path, "r") as f:
-        f_cont = f.read()
-        
-    return f_cont.split("\n")
+        return f.readlines()
     
 
 reviews = get_movie_reviews(REVIEWS_PATH)
@@ -436,6 +451,7 @@ es_sentences = read_spanish(es_path)
 
 # In[27]:
 
+# constants shuold be at top of file 
 
 N_SENTENCES = 100                     #Number of samples to take
 
