@@ -51,7 +51,9 @@ Just run the script:
 
 ### Tests
 
-Tests are performed at the end of the execution.
+Head to the *tests* folder and execute each py file containing the set of unit tests for each functionality (one file per task).
+
+	python <testname.py>
 
 ## Authors
 
